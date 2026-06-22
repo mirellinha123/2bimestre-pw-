@@ -1,0 +1,445 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rajdhani:wght@600;700&display=swap');
+
+:root {
+    --bg-principal: #07070a;
+    --bg-secundario: #0f0f19;
+    --bege-pixel: #ffffff;
+    --verde-acinzentado: #00f0ff;
+    --verde-neon: #00f0ff;
+    --rosa-coquete: #ff69b4;
+    --cinza-arcade: #666666;
+}
+
+/* HTML e Body com altura total */
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: var(--bg-principal);
+    color: var(--bege-pixel);
+    font-family: 'Rajdhani', sans-serif;
+    background-image:
+        linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%),
+        linear-gradient(90deg, rgba(139, 29, 29, 0.06), rgba(143, 161, 125, 0.02), rgba(79, 105, 88, 0.06));
+    background-size: 100% 4px, 6px 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main ocupa todo espaço disponível */
+main {
+    flex: 1;
+}
+
+.arcade-title {
+    font-family: 'Press Start 2P', cursive;
+    color: var(--rosa-coquete);
+    text-shadow: 0 0 10px rgba(255, 105, 180, 0.7), 0 0 20px rgba(255, 105, 180, 0.5);
+    text-transform: uppercase;
+}
+
+.arcade-subtitle {
+    color: var(--verde-neon);
+    text-shadow: 0 0 8px rgba(143, 161, 125, 0.6);
+}
+
+.navbar-arcade {
+    border-bottom: 3px solid var(--rosa-coquete);
+    box-shadow: 0 4px 15px rgba(255, 105, 180, 0.5);
+    background-color: var(--bg-principal) !important;
+}
+
+.navbar-brand {
+    margin-right: auto !important;
+    margin-left: 0 !important;
+}
+
+.navbar-arcade .nav-link {
+    color: var(--bege-pixel) !important;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.7rem;
+    margin-right: 15px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+.navbar-arcade .nav-link:hover,
+.navbar-arcade .nav-link.active {
+    color: var(--verde-neon) !important;
+    text-shadow: 0 0 10px rgba(143, 161, 125, 0.8);
+}
+
+.arcade-card {
+    background: var(--bg-secundario);
+    border: 3px solid var(--verde-neon);
+    box-shadow: 0 0 15px rgba(143, 161, 125, 0.5), inset 0 0 10px rgba(143, 161, 125, 0.3);
+    border-radius: 0px;
+    padding: 25px;
+}
+
+.arcade-card-red {
+    border-color: var(--rosa-coquete);
+    box-shadow: 0 0 15px rgba(255, 105, 180, 0.5), inset 0 0 10px rgba(255, 105, 180, 0.3);
+}
+
+.btn-arcade {
+    background-color: transparent;
+    border: 2px solid var(--rosa-coquete);
+    color: var(--bege-pixel);
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.7rem;
+    padding: 12px;
+    border-radius: 0px;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 8px rgba(255, 105, 180, 0.5);
+    text-transform: uppercase;
+}
+
+.btn-arcade:hover {
+    background-color: var(--rosa-coquete);
+    color: var(--bege-pixel);
+    box-shadow: 0 0 20px var(--rosa-coquete);
+}
+
+.btn-arcade-green {
+    border-color: var(--verde-neon);
+    color: var(--bege-pixel);
+    box-shadow: 0 0 8px rgba(143, 161, 125, 0.5);
+}
+
+.btn-arcade-green:hover {
+    background-color: var(--verde-neon);
+    color: var(--bg-principal);
+    box-shadow: 0 0 20px var(--verde-neon);
+}
+
+.arcade-input {
+    background-color: #000;
+    border: 2px solid var(--verde-acinzentado);
+    color: var(--bege-pixel);
+    border-radius: 0px;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.arcade-input::placeholder {
+    color: var(--cinza-arcade);
+}
+
+.arcade-input:focus {
+    background-color: #050505;
+    color: var(--bege-pixel);
+    border-color: var(--rosa-coquete);
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.6);
+}
+
+.text-vermelho-st {
+    color: var(--rosa-coquete) !important;
+}
+
+.text-verde-neon {
+    color: var(--verde-neon) !important;
+}
+
+.text-bege {
+    color: var(--bege-pixel) !important;
+}
+
+.glow-red {
+    text-shadow: 0 0 10px rgba(255, 105, 180, 0.7);
+}
+
+.glow-green {
+    text-shadow: 0 0 10px rgba(143, 161, 125, 0.7);
+}
+
+/* Rodapé Fixo na Base */
+footer {
+    border-top: 2px solid var(--verde-neon);
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.6rem;
+    color: var(--cinza-arcade);
+    background-color: var(--bg-secundario);
+    margin-top: auto;
+    width: 100%;
+}
+
+.table-arcade {
+    color: var(--bege-pixel) !important;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.table-arcade thead th {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.75rem;
+    color: var(--rosa-coquete);
+    text-shadow: 0 0 5px rgba(255, 105, 180, 0.7);
+    border-bottom: 3px solid var(--rosa-coquete) !important;
+    background-color: transparent !important;
+    text-transform: uppercase;
+}
+
+.table-arcade tbody td {
+    background-color: transparent !important;
+    color: var(--bege-pixel) !important;
+    border-bottom: 1px solid rgba(0, 240, 255, 0.15) !important;
+    font-size: 1rem;
+}
+
+.table-hover.table-arcade tbody tr:hover td {
+    background-color: rgba(0, 240, 255, 0.05) !important;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.foto-tabela {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    border: 2px solid var(--verde-neon);
+    box-shadow: 0 0 8px rgba(143, 161, 125, 0.5);
+    background-color: #000;
+    padding: 2px;
+}
+
+.img-funko {
+    max-width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: contain;
+    border: 2px solid var(--rosa-coquete);
+    box-shadow: 0 0 15px rgba(255, 105, 180, 0.6);
+    background-color: #000;
+    padding: 10px;
+}
+
+.card-centralized {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.table-arcade .btn {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+    border-radius: 0px;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+}
+
+.border-vermelho-st {
+    border-color: var(--rosa-coquete) !important;
+}
+
+.input-group .form-control {
+    background-color: #000 !important;
+    border: 2px solid var(--verde-acinzentado) !important;
+    color: var(--bege-pixel) !important;
+}
+
+.input-group .form-control:focus {
+    background-color: #050505 !important;
+    color: var(--bege-pixel) !important;
+    border-color: var(--rosa-coquete) !important;
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.6) !important;
+}
+
+.gap-2 {
+    gap: 0.5rem;
+}
+
+.flex-grow-1 {
+    flex-grow: 1;
+}
+
+.modal-content {
+    background-color: var(--bg-secundario) !important;
+    border: 2px solid var(--rosa-coquete) !important;
+    box-shadow: 0 0 20px rgba(255, 105, 180, 0.6);
+}
+
+.modal-content .btn-close-white {
+    filter: brightness(0) invert(1);
+}
+
+/* Customização dos Alerts */
+.alert {
+    border: 3px solid var(--rosa-coquete) !important;
+    background-color: var(--bg-secundario) !important;
+    color: var(--bege-pixel) !important;
+    border-radius: 0px !important;
+    box-shadow: 0 0 15px rgba(255, 105, 180, 0.5);
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.alert h4 {
+    font-family: 'Press Start 2P', cursive;
+    color: var(--verde-neon);
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px rgba(143, 161, 125, 0.7);
+}
+
+.alert p {
+    font-family: 'Rajdhani', sans-serif;
+    color: var(--bege-pixel);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.alert-success {
+    border-color: var(--verde-neon) !important;
+    box-shadow: 0 0 15px rgba(143, 161, 125, 0.5) !important;
+}
+
+.alert-success h4 {
+    color: var(--verde-neon);
+    text-shadow: 0 0 10px rgba(143, 161, 125, 0.7);
+}
+
+.alert-danger {
+    border-color: var(--rosa-coquete) !important;
+    box-shadow: 0 0 15px rgba(255, 105, 180, 0.5) !important;
+}
+
+.alert-danger h4 {
+    color: var(--rosa-coquete);
+    text-shadow: 0 0 10px rgba(255, 105, 180, 0.7);
+}
+
+/* Alert Info */
+.alert-info {
+    border-color: var(--verde-neon) !important;
+    box-shadow: 0 0 15px rgba(143, 161, 125, 0.5) !important;
+}
+
+.alert-info h4 {
+    color: var(--verde-neon);
+    text-shadow: 0 0 10px rgba(143, 161, 125, 0.7);
+}
+
+.btn-close {
+    filter: brightness(0) invert(1) !important;
+}
+
+.form-label {
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+}
+
+/* Botões em Uppercase com Fonte Arcade */
+.btn-arcade,
+.btn-arcade-green {
+    text-transform: uppercase !important;
+    font-family: 'Press Start 2P', cursive !important;
+    font-size: 0.7rem !important;
+}
+
+/* Customização dos Botões do Modal */
+.modal-footer .btn {
+    font-family: 'Press Start 2P', cursive !important;
+    font-size: 0.7rem !important;
+    padding: 12px !important;
+    border-radius: 0px !important;
+    text-transform: uppercase !important;
+    flex: 1;
+}
+
+.modal-footer .btn-arcade {
+    border-radius: 5px !important;
+}
+
+.modal-footer .btn-arcade-green {
+    border-radius: 0px !important;
+}
+
+/* Botões do Formulário Incluir/Editar */
+.arcade-card .d-flex .btn-arcade {
+    border-radius: 5px !important;
+}
+
+.arcade-card .d-flex .btn-arcade-green {
+    border-radius: 5px !important;
+}
+
+@keyframes flicker {
+    0%,
+    19%,
+    21%,
+    23%,
+    25%,
+    54%,
+    56%,
+    100% {
+        text-shadow: 0 0 10px rgba(255, 105, 180, 0.7);
+    }
+
+    20%,
+    24%,
+    55% {
+        text-shadow: none;
+    }
+}
+
+.flicker {
+    animation: flicker 3s infinite;
+}
+
+/* Customização do Navbar Toggler */
+.navbar-toggler {
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none !important;
+    outline: none !important;
+    background-color: transparent !important;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23ffffff' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+@media (max-width: 768px) {
+    .arcade-title {
+        font-size: 1.5rem !important;
+    }
+
+    .navbar-arcade .nav-link {
+        font-size: 0.6rem;
+        margin-right: 10px;
+    }
+
+    .arcade-card {
+        padding: 15px;
+    }
+
+    footer {
+        font-size: 0.5rem;
+    }
+
+    .table-arcade .btn {
+        font-size: 0.65rem;
+        padding: 8px;
+    }
+
+    .foto-tabela {
+        width: 50px;
+        height: 50px;
+    }
+
+    .img-jogos {
+        max-height: 300px;
+    }
+
+    .alert h4 {
+        font-size: 0.8rem;
+    }
+
+    .alert p {
+        font-size: 0.85rem;
+    }
+}
